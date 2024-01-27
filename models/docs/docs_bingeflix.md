@@ -77,6 +77,10 @@ This table contains behavioral event data collected via app interaction.
 This table contains the source information for Bingeflix behavioural events while interacting with the Bingeflix app.
 {% enddocs %}
 
+{% docs bingeflix_table_events_fct %}
+Fact model of information about Bingeflix behavioural events while interacting with the Bingeflix app.
+{% enddocs %}
+
 
 ### Events Columns
 {% docs bingeflix_column_events_session_id %}
@@ -93,6 +97,18 @@ The name of the event.
 
 {% docs bingeflix_column_event_id %}
 The unique identifier of the event.
+{% enddocs %}
+
+{% docs bingeflix_column_user_logged_in_count %}
+The number of times the user logged in during the specified session.
+{% enddocs %}
+
+{% docs bingeflix_column_user_logged_out_count %}
+The number of times the user logged out during the specified session.
+{% enddocs %}
+
+{% docs bingeflix_column_video_watched_count %}
+The number of times the user watched videos during the specified session.
 {% enddocs %}
 
 
