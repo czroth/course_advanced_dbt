@@ -10,6 +10,9 @@ This table contains the Bingeflix user's information.
 This table contains the source information for Bingeflix users.
 {% enddocs %}
 
+{% docs bingeflix_table_users_dim %}
+Dimensional model of information about Bingeflix users.
+{% enddocs %}
 
 ### Users Columns
 {% docs bingeflix_column_user_id %}
@@ -37,7 +40,7 @@ User's name.
 {% enddocs %}
 
 {% docs bingeflix_column_sex %}
-User's sex at birth.
+User's sex at birth. 'M' or 'F'.
 {% enddocs %}
 
 {% docs bingeflix_column_email %}
@@ -48,12 +51,20 @@ User's email
 User's birthdate
 {% enddocs %}
 
-{% docs bingeflix_columnat_region %}
+{% docs bingeflix_column_region %}
 User's region or administrative division (state, province, etc)
 {% enddocs %}
 
 {% docs bingeflix_column_country %}
 User's country of residence.
+{% enddocs %}
+
+{% docs bingeflix_column_user_current_age %}
+User's current age.
+{% enddocs %}
+
+{% docs bingeflix_column_user_age_at_acquisition %}
+The age of the user when they became a Bingeflix user.
 {% enddocs %}
 
 
@@ -82,4 +93,17 @@ The name of the event.
 
 {% docs bingeflix_column_event_id %}
 The unique identifier of the event.
+{% enddocs %}
+
+
+
+## Subscriptions
+
+### Subscriptions Columns
+{% docs bingeflix_column_first_subscription_starts_at %}
+Timestamp of first user subscription.
+{% enddocs %}
+
+{% docs bingeflix_count_of_subscriptions %}
+Number of subscriptions purchased by user.
 {% enddocs %}
