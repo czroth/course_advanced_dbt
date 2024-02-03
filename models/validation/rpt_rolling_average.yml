@@ -1,0 +1,29 @@
+models:
+  - name: rpt_rolling_average
+    description: 'Test cases for rolling_average macro'
+    meta:
+      priority: medium
+    columns:
+      - name: created_at
+        description: 'Mock time'
+        tests:
+          - not_null
+
+      - name: fruit
+        description: 'Type of fruit'
+        tests:
+          - not_null
+
+      - name: price
+        description: 'Price per unit'
+        tests:
+          - not_null
+
+      - name: AVG_3_PERIODS_FRUIT
+        description: 'Rolling 3 day price per unit'
+
+      - name: AVG_7_PERIODS_FRUIT
+        description: 'Rolling 7 day price per unit'
+
+      - name: AVG_14_PERIODS_FRUIT
+        description: 'Rolling 14 day price per unit'
