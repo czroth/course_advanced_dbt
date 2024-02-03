@@ -8,11 +8,11 @@ models:
           - not_null
           - unique
 
-      - name: DATE_WEEK
+      - name: date_week
         description: The calendar week.
 
-      - name: USER_ID
+      - name: user_id
         description: The unique identifier of the Bingeflix user.
 
-      - name: LOGIN_COUNT
+      - name: login_count
         description: The total number of logins for a given user in a given week.
