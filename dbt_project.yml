@@ -34,10 +34,17 @@ models:
     marts:
       core:
         +schema: core_reporting
+        +docs:
+          node_color: "purple"
       finance:
         +schema: finance
       product:
         +schema: product
+
+  # hide dbt_project_evaluator package output from docs.
+  dbt_project_evaluator:
+    +docs:
+      show: false
 
 seeds:
   dbt_project_evaluator:
