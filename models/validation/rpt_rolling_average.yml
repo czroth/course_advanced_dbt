@@ -3,6 +3,11 @@ models:
     description: 'Test cases for rolling_average macro'
     meta:
       priority: medium
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - created_at
+            - fruit
     columns:
       - name: created_at
         description: 'Mock time'
