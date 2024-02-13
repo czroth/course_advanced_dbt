@@ -50,5 +50,15 @@ seeds:
   dbt_project_evaluator:
     dbt_project_evaluator_exceptions:
       +enabled: false
-
+  unit_testing:
+    +schema: unit_testing
+    +tags: unit_testing
+    expected_output_rolling_test_data:
+      +column_types:
+        CREATED_AT: DATE
+        FRUIT: VARCHAR
+        PRICE: FLOAT
+        AVG_3_PERIODS_PRICE: FLOAT
+        AVG_7_PERIODS_PRICE: FLOAT
+        AVG_14_PERIODS_PRICE: FLOAT
 on-run-end: "{{ dbt_project_evaluator.print_dbt_project_evaluator_issues() }}"
