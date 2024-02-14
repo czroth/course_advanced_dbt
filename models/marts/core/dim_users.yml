@@ -11,46 +11,39 @@ models:
         meta:
           priority: high
         tests:
-          - not_null
+          # not null tested in staging
           - unique
 
       - name: created_at
         description: '{{ doc("bingeflix_column_user_created_at") }}'
-        tests:
-          - not_null
+        # tested in staging
 
       - name: phone_number
         description: '{{ doc("bingeflix_column_phone_number") }}'
-        tests:
-          - not_null
+        # tested in staging
 
       - name: deleted_at
         description: '{{ doc("bingeflix_column_user_deleted_at") }}'
 
       - name: username
         description: '{{ doc("bingeflix_column_username") }}'
-        tests:
-          - not_null
+        # tested in staging
 
       - name: name
         description: '{{ doc("bingeflix_column_user_name") }}'
-        tests:
-          - not_null
+        # tested in staging
 
       - name: sex
         description: '{{ doc("bingeflix_column_sex") }}'
-        tests:
-          - not_null
+        # tested in staging
 
       - name: email
         description: '{{ doc("bingeflix_column_email") }}'
-        tests:
-          - not_null
+        # tested in staging
 
       - name: birthdate
         description: '{{ doc("bingeflix_column_birthdate") }}'
-        tests:
-          - not_null
+        # tested in staging
 
       - name: current_age
         description: '{{ doc("bingeflix_column_user_current_age") }}'
@@ -64,13 +57,11 @@ models:
 
       - name: region
         description: '{{ doc("bingeflix_column_region") }}'
-        tests:
-          - not_null
+        # tested in staging
 
       - name: country
         description: '{{ doc("bingeflix_column_country") }}'
-        tests:
-          - not_null
+        # tested in staging
 
       - name: first_subscription_starts_at
         description: '{{ doc("bingeflix_column_first_subscription_starts_at") }}'

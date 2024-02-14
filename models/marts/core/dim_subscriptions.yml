@@ -5,25 +5,23 @@ models:
       - name: subscription_id
         description: The unique identifier of the subscription.
         tests:
-          - not_null
+          # not null tested in staging
           - unique
 
       - name: subscription_plan_id
         description: The subscription plan identifier.
         tests:
-          - not_null
+          # not null tested in staging
           - accepted_values:
               values: [1, 2, 3]
 
       - name: user_id
         description: The identifier of the user.
-        tests:
-          - not_null
+      # tested in staging
 
       - name: starts_at
         description: When the subscription started.
-        tests:
-          - not_null
+      # tested in staging
 
       - name: ends_at
         description: When the subscription ends.
