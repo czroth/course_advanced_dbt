@@ -8,6 +8,9 @@ models:
           combination_of_columns:
             - created_at
             - fruit
+      - dbt_utils.equality:
+          compare_model: ref('expected_output_rolling_test_data')
+          tags: ['unit_testing']
     columns:
       - name: created_at
         description: 'Mock time'
