@@ -9,11 +9,7 @@ WITH source AS (
 
     SELECT * FROM {{ source('bingeflix', 'events') }}
 
-{% if is_incremental() %}
-
-  WHERE created_at > (SELECT DATEADD('day', -3, MAX(created_at)) FROM {{ this }})
-
-{% endif %}
+{{ incremental_where_clause() }}
 
 ),
 
