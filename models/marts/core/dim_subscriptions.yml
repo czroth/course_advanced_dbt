@@ -3,7 +3,7 @@ models:
     description: This model contains information about Bingeflix subscriptions.
     columns:
       - name: subscription_id
-        description: The unique identifier of the subscription.
+        description: '{{ doc("bingeflix_column_subscription_id") }}'
         tests:
           # not null tested in staging
           - unique

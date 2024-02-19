@@ -123,3 +123,7 @@ Timestamp of first user subscription.
 {% docs bingeflix_count_of_subscriptions %}
 Number of subscriptions purchased by user.
 {% enddocs %}
+
+{% docs bingeflix_column_subscription_id %}
+The unique identifier of the subscription.
+{% enddocs %}

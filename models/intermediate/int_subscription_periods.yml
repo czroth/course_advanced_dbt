@@ -1,0 +1,35 @@
+models:
+  - name: int_subscription_periods
+    description: This is a monthly calendar table that computes start and end months of a subscription.
+    columns:
+      - name: subscription_id
+        description: '{{ doc("bingeflix_column_subscription_id") }}'
+        tests:
+          - unique
+          # not null tested in staging
+
+      - name: user_id
+        description: '{{ doc("bingeflix_column_user_id") }}'
+          # not null tested in staging
+
+      - name: plan_name
+        description: The first date of the calendar month.
+
+      - name: monthly_amount
+        description: The first date of the calendar quarter.
+
+      - name: starts_at
+        description: When the subscription started.
+
+      - name: ends_at
+        description: When the subscription ended. This value is NULL if the subscription has not had auto-renew turned off.
+
+      - name: start_month
+        description: Month when the subscription started.
+        tests:
+          - not_null
+
+      - name: end_month
+        description: Month when the subscription ended. This value is next month if the subscription is ongoing.
+        tests:
+          - not_null
